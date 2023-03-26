@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactText } from "react";
 import "../assets/arrow.png"
 import { COLORS } from '../colors';
 
@@ -11,6 +11,7 @@ interface Props {
   onClick?: () => void;
   radius?: string
   width?: string;
+  buttonImageStyle?:React.CSSProperties;
 }
 
 const Button2: React.FC<Props> = ({ 
@@ -21,7 +22,8 @@ const Button2: React.FC<Props> = ({
     height = "50px",
     onClick, 
     radius = "50%",
-    width = "50px"
+    width = "50px",
+    buttonImageStyle,
   }) => { 
   return (
     <button 
@@ -37,7 +39,7 @@ const Button2: React.FC<Props> = ({
          justifyContent: "center"
       }}
     >
-    <img height="30px" width="30px" src={imagePath} />
+    <img height="30px" width="30px" src={imagePath} style={buttonImageStyle} />
     {children}
     </button>
   );
