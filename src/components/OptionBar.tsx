@@ -5,7 +5,7 @@ type OptionBarProps = {
   text: string,
 }
 const OptionDiv = styled.div<{selected:Boolean}>`
-background-color: #0F84FD;
+background-color: COLORS.secondaryBlue;
 border-radius: 30px;
 padding:0px 24px;
 cursor: pointer;
