@@ -11,6 +11,7 @@ interface Props {
   onClick?: () => void;
   radius?: string;
   width?: string;
+  fontcolor?: string;
 }
 
 const Button1: React.FC<Props> = ({ 
@@ -20,7 +21,8 @@ const Button1: React.FC<Props> = ({
     height = "50px",
     onClick, 
     radius = "20px",
-    width = "300px"
+    width = "300px",
+    fontcolor = "white"
   }) => { 
   return (
     <button 
@@ -33,14 +35,14 @@ const Button1: React.FC<Props> = ({
          width
       }}
     >
-    <ButtonText>{children}</ButtonText>
+    <ButtonText fontcolor={fontcolor}>{children}</ButtonText>
     </button>
   );
 }
 
-const ButtonText = styled.h1`
-color:white;
-font-size: 36px;
+const ButtonText = styled.h1<{fontcolor:string}>`
+color:${props => props.fontcolor};
+font-size: 18px;
 margin: auto;
 :focus{
   outline:solid;

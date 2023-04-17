@@ -4,6 +4,7 @@ export const COLORS = {
     primaryBlue:'#0F84FD',
     secondaryBlue: '#80B8F1',
     randomGreen:'#59F574',
-    pureBlack: "#000000"
+    pureBlack: "#000000",
+    grey: "#D9D9D9"
     // your colors
 }
